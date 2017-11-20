@@ -41,6 +41,18 @@ html {
   text-align: center;
 }
 
+@media(max-width: 500px) {
+  #header {
+    margin-bottom: 20px;
+  }
+  #replay {
+    margin-top: 20px;
+  }
+  #main {
+    width: 100%;
+  }
+}
+
 #result {
   margin: 5px;
 }
