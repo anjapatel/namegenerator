@@ -33,8 +33,8 @@ var secondword = [
 
 //randomize! woo!
 $('#replay').click(function() {
-  $('h2').text(randomEl(firstword) + ' ' + randomEl(secondword));
-  selectElementContents($('h2')[0]);
+  $('h2').text(getRandom(firstword) + ' ' + getRandom(secondword));
+  //selectElementContents($('h2')[0]);
 });
 
 $('#replay').click(function() {
@@ -43,7 +43,7 @@ $('#replay').click(function() {
 });
 
 //ngl i found this in a fiddle, i don't quite understand the parameters
-function randomEl(list) {
+function getRandom(list) {
   var i = Math.floor(Math.random() * list.length);
   return list[i];
 }
