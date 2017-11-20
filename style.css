@@ -52,7 +52,7 @@ html {
   opacity: 0.6;
 }
 
-#button {
+button {
   background-color: white;
   border: 2px solid black;
   color: black;
@@ -65,7 +65,7 @@ html {
   position: relative;
 }
 
-#button:hover {
+button:hover {
   background-color: grey;
   color: white;
   cursor: pointer;
