@@ -32,18 +32,18 @@ var secondword = [
 
 
 //randomize! woo!
-$('button').click(function() {
-  $('#witchname').text(randomEl(firstword) + ' ' + randomEl(secondword));
-  selectElementContents($('#witchname').get(0));
+$('#replay').click(function() {
+  $('#witchname').text(getRandom(firstword) + ' ' + getRandom(secondword));
+  //selectElementContents($('h2')[0]);
 });
 
-//show element works here, but i can't keep it from firing as soon as i reload
-$('button').click(function() {
+$('#replay').click(function() {
+  $("#text").hide();
   $('#text').show(400);
 });
 
 //ngl i found this in a fiddle, i don't quite understand the parameters
-function randomEl(list) {
+function getRandom(list) {
   var i = Math.floor(Math.random() * list.length);
   return list[i];
 }
@@ -55,8 +55,6 @@ function selectElementContents(el) {
   sel.removeAllRanges();
   sel.addRange(range);
 }
-
-$('button').click();
 
 /* BuzzFeed UK New Formats Sharing. 26 Jul 2017 Ver A.
 
