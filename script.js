@@ -32,13 +32,13 @@ var secondword = [
 
 
 //randomize! woo!
-$('button').click(function() {
+$('#replay').click(function() {
   $('h2').text(randomEl(firstword) + ' ' + randomEl(secondword));
   selectElementContents($('h2')[0]);
 });
 
-//show element works here, but i can't keep it from firing as soon as i reload
-$('button').click(function() {
+$('#replay').click(function() {
+  $("#text").hide();
   $('#text').show(400);
 });
 
@@ -55,5 +55,3 @@ function selectElementContents(el) {
   sel.removeAllRanges();
   sel.addRange(range);
 }
-
-$('button').click();
