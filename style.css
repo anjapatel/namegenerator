@@ -20,7 +20,8 @@ html {
 
 #topbox {
   position: relative;
-  width: 95%;
+  width: 95%; /* older browsers */
+  width: calc(100% - 20px); /* newer browsers, compensate for margins */
   height: 25%;
   margin-left: 10px;
   margin-right: 10px;
@@ -38,6 +39,18 @@ html {
   padding-bottom: 10px;
   margin-bottom: 50px;
   text-align: center;
+}
+
+@media(max-width: 500px) {
+  #header {
+    margin-bottom: 20px;
+  }
+  #replay {
+    margin-top: 20px;
+  }
+  #main {
+    width: 100%;
+  }
 }
 
 #result {
@@ -90,11 +103,9 @@ button:hover {
 }
 
 #text {
-
-  display: inline-block;
+  display: block;
   color: black;
   position: relative;
-  white-space: nowrap;
   top: 0;
   left: 0;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
